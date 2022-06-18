@@ -1,6 +1,10 @@
 {
   "extends": ["prettier", "@nuxtjs/eslint-config-typescript"],
   "plugins": ["prettier"],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
   "rules": {
     "semi": "off",
     "prettier/prettier": ["warn"]
