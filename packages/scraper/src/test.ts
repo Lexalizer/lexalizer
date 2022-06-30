@@ -1,4 +1,4 @@
-import { ScrapeResult } from './interface/ScrapeResult';
+import { Preface, ScrapeResult } from './interface/ScrapeResult';
 
 const testObject: ScrapeResult = {
   title: 'fedlex-data-admin-ch-eli-cc-24-233_245_233-20220101-de-docx-3',
@@ -7,7 +7,7 @@ const testObject: ScrapeResult = {
   lawContent: {
     children: [
       {
-        type: 'preface',
+        type: 'Preface',
         de_erlassTitel: 'Schweizerisches Zivilgesetzbuch',
         children: [
           {
