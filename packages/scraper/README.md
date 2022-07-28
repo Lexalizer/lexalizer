@@ -1,7 +1,19 @@
 # Lexalizer scraper
 
+## behaviour
+scraped data may still contain some html-tags, as to fully get all relevant content the html-content was included.
+This behaviour may be changed in the future, but currently there are too many unknown exceptions in the html-content
+In development enviroment the last scraping result gets saved in `dist/result.json`, so you can inspect it.
+
+## development
+Use `pnpm dev` to watch for changes and automatically run the scraper, check the generated result in `dist/result.json`.
+
+## todo
+- [ ] save to DB
+- [ ] callable by REST-API
+
 ## possible extensions
-introduce a scrape to get all "System Rechtssammlungsnummer" (System Law Collection Number) with SPARQL
+introduce a scrape to get all "System Rechtssammlungsnummer" (System Law Collection Number) with SPARQL, small example:
 ```javascript
 fetch("https://fedlex.data.admin.ch/sparqlendpoint", {
   "headers": {
