@@ -4,18 +4,12 @@ export interface ScrapeResult {
   de_systemRechtsSammlungsnummer: number;
   lawContent: LawElement;
   footNoteMap: Map<string, string> // key: footNoteId, value: footNoteHTML
+  unhandledElements: boolean;
 }
-
-type LawElementType =
-  | Preface
-  | Preamble
-  | Paragraph
-  | Section
-  | Article;
 
 export interface LawElement {
   type: string,
-  children: [LawElementType]
+  children: LawElement[]
 }
 
 // only contains title and the SR-number (see in ScrapeResult-interface)
@@ -37,12 +31,10 @@ export interface Paragraph extends LawElement {
 }
 
 // uniqueLeveLId is the full identifier, containing any parent-ids
-// levelId is just the last part of said identifier, to easily get the current level
 export interface Section extends LawElement {
   type: 'section';
   title: string;
   uniqueLevelId: string;
-  levelId: string;
 }
 
 // this id is NOT UNIQUE, its uniqueness is determined by their parents and their levelIDs

@@ -8,10 +8,6 @@ In development enviroment the last scraping result gets saved in `dist/result.js
 ## development
 Use `pnpm dev` to watch for changes and automatically run the scraper, check the generated result in `dist/result.json`.
 
-## todo
-- [ ] save to DB
-- [ ] callable by REST-API
-
 ## possible extensions
 introduce a scrape to get all "System Rechtssammlungsnummer" (System Law Collection Number) with SPARQL, small example:
 ```javascript
