@@ -2,6 +2,8 @@
   "recommendations": [
     "dbaeumer.vscode-eslint",
     "vue.volar",
-    "esbenp.prettier-vscode"
+    "esbenp.prettier-vscode",
+    "ahmadawais.emoji-log-vscode",
+    "PKief.material-icon-theme"
   ]
 }
