@@ -10,10 +10,8 @@ type ConfigurationType = {
 @Injectable()
 export class ConfigurationService {
   static jwtSecret: string;
-  static jwtExpiration: string;
-
   static async initializeEnvironment(): Promise<void> {
-    if (this.jwtSecret && this.jwtExpiration) {
+    if (this.jwtSecret) {
       return;
     }
 
@@ -28,12 +26,6 @@ export class ConfigurationService {
       savedConfiguration,
       'jwtSecret',
       crypto.randomBytes(256).toString('base64')
-    );
-    this.handleMultipleSources(
-      'JWT_EXPIRATION',
-      savedConfiguration,
-      'jwtExpiration',
-      '1d'
     );
 
     await this.saveConfiguration(savedConfiguration);
