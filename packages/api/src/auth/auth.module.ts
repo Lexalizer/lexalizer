@@ -3,18 +3,20 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { APP_GUARD } from '@nestjs/core';
 import { JwtModule } from '@nestjs/jwt';
 import { PassportModule } from '@nestjs/passport';
-import { ConfigurationService } from 'src/config/config.service';
+import { ConfigurationModule } from 'src/configuration/configuration.module';
+import { ConfigurationService } from 'src/configuration/configuration.service';
 import { UsersModule } from '../users/users.module';
 import { AuthController } from './auth.controller';
 import { AuthService } from './auth.service';
-import { JwtAuthGuard } from './jwt-auth.guard';
-import { JwtStrategy } from './jwt.strategy';
-import { LocalStrategy } from './local.strategy';
+import { JwtAuthGuard } from './guards/jwt-auth.guard';
+import { JwtStrategy } from './strategies/jwt.strategy';
+import { LocalStrategy } from './strategies/local.strategy';
 
 @Module({
   imports: [
     UsersModule,
     PassportModule,
+    ConfigurationModule,
     JwtModule.registerAsync({
       imports: [ConfigModule],
       useFactory: async (configService: ConfigService) => {

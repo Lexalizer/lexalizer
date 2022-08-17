@@ -3,6 +3,7 @@ import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 import { ConfigModule } from '@nestjs/config';
 import { validationSchema } from './env.validate';
+import { ConfigurationModule } from './configuration/configuration.module';
 
 @Module({
   imports: [
@@ -11,7 +12,8 @@ import { validationSchema } from './env.validate';
       validationOptions: { allowUnkown: false }
     }),
     AuthModule,
-    UsersModule
+    UsersModule,
+    ConfigurationModule
   ]
 })
 export class AppModule {}
