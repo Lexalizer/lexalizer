@@ -1,0 +1,37 @@
+$background-primary: #edf2f7;
+$background-elevated: #ffffff;
+$background-click: #eaeaea;
+
+$background-header-1: #243046;
+$background-header-2: #2b253a;
+$background-header: linear-gradient(
+  to right,
+  $background-header-1,
+  $background-header-2
+);
+
+$text-dark: #2b2b2b;
+$text-light: #ffffff;
+$text-semi-light: #707070;
+
+$sidebar-shadow: 2.5px 2.5px 2.8px -11px rgba(0, 0, 0, 0.014),
+  6.1px 6.1px 6.7px -11px rgba(0, 0, 0, 0.02),
+  11.5px 11.5px 12.5px -11px rgba(0, 0, 0, 0.025),
+  20.5px 20.5px 22.3px -11px rgba(0, 0, 0, 0.03),
+  38.4px 38.4px 41.8px -11px rgba(0, 0, 0, 0.036),
+  92px 92px 100px -11px rgba(0, 0, 0, 0.05);
+
+$header-shadow: 4.5px 1.4px 1.6px -6px rgba(0, 0, 0, 0.014),
+  12.5px 3.9px 4.4px -6px rgba(0, 0, 0, 0.02),
+  30.1px 9.3px 10.6px -6px rgba(0, 0, 0, 0.026),
+  100px 31px 35px -6px rgba(0, 0, 0, 0.04);
+
+$floating-btn-shadow: 0px 0.8px 1.6px -6px rgba(0, 0, 0, 0.100),
+  0px 2.3px 4.4px -6px rgba(0, 0, 0, 0.150),
+  0px 5.4px 10.6px -6px rgba(0, 0, 0, 0.200),
+  0px 18px 35px -6px rgba(0, 0, 0, 0.315);
+
+$floating-btn-shadow-elevated: 0px 0.8px 1.6px -6px rgba(0, 0, 0, 0.180),
+  0px 2.3px 4.4px -6px rgba(0, 0, 0, 0.210),
+  0px 5.4px 10.6px -6px rgba(0, 0, 0, 0.280),
+  0px 18px 35px -6px rgba(0, 0, 0, 0.400);
