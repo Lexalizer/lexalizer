@@ -1,12 +1,20 @@
-# Lexalizer frontend
+# Nuxt 3 Minimal Starter
+
+Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
 
 ## Setup
 
 Make sure to install the dependencies:
 
 ```bash
+# yarn
+yarn install
+
+# npm
+npm install
+
 # pnpm
-pnpm install
+pnpm install --shamefully-hoist
 ```
 
 ## Development Server
@@ -14,7 +22,7 @@ pnpm install
 Start the development server on http://localhost:3000
 
 ```bash
-pnpm run dev
+npm run dev
 ```
 
 ## Production
@@ -22,13 +30,13 @@ pnpm run dev
 Build the application for production:
 
 ```bash
-pnpm run build
+npm run build
 ```
 
 Locally preview production build:
 
 ```bash
-pnpm run preview
+npm run preview
 ```
 
 Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.
